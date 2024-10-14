@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "Bull Queue App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear trabajo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\":{\"message\":\"Mi trabajo de prueba\"}}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/job",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "job"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener estado del trabajo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/job/:jobId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "job", ":jobId"],
+          "variable": [
+            {
+              "key": "jobId",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
